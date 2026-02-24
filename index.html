@@ -7,8 +7,10 @@
     <style>
         /* RESET E STILI BASE */
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        
         body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            /* CAMBIO FONT IN MONACO */
+            font-family: "Monaco", "Courier New", Courier, monospace;
             background-color: #ffffff;
             color: #000000;
             line-height: 1.6;
@@ -36,17 +38,16 @@
         }
 
         h1 {
-            font-size: 3rem;
-            font-weight: 300;
+            font-size: 2.5rem; /* Leggermente ridotto per adattarsi al font monospaced */
+            font-weight: normal;
             margin-bottom: 20px;
             letter-spacing: -1px;
         }
 
         .description {
-            max-width: 600px;
-            font-size: 1.1rem;
+            max-width: 700px;
+            font-size: 1rem;
             margin-bottom: 40px;
-            font-weight: 300;
         }
 
         nav ul {
@@ -55,7 +56,11 @@
             gap: 25px;
         }
 
-        nav ul li { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; }
+        nav ul li { 
+            font-size: 0.8rem; 
+            text-transform: uppercase; 
+            letter-spacing: 1px; 
+        }
 
         /* GALLERY SECTION */
         #gallery {
@@ -66,13 +71,12 @@
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
+            gap: 30px;
         }
 
         .gallery-item {
             overflow: hidden;
             position: relative;
-            background: #f9f9f9;
         }
 
         .gallery-item img {
@@ -80,17 +84,19 @@
             height: 400px;
             object-fit: cover;
             display: block;
-            transition: transform 0.5s ease;
+            filter: grayscale(20%); /* Leggero tocco artistico per lo stile tech */
+            transition: all 0.5s ease;
         }
 
         .gallery-item:hover img {
-            transform: scale(1.05);
+            transform: scale(1.03);
+            filter: grayscale(0%);
         }
 
         .gallery-item h3 {
             padding: 15px 0;
-            font-size: 0.9rem;
-            font-weight: 400;
+            font-size: 0.8rem;
+            font-weight: normal;
             text-transform: uppercase;
         }
 
@@ -98,8 +104,9 @@
         footer {
             padding: 50px;
             text-align: center;
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             border-top: 1px solid #eee;
+            letter-spacing: 1px;
         }
     </style>
 </head>
@@ -126,49 +133,49 @@
         <div class="gallery-grid">
             <div class="gallery-item">
                 <img src="images/fulls/01_laurea.jpg" alt="Graduation">
-                <h3>Graduation</h3>
+                <h3>01. Graduation</h3>
             </div>
             <div class="gallery-item">
                 <img src="images/fulls/02_cern.jpg" alt="CERN">
-                <h3>CERN Research</h3>
+                <h3>02. CERN Research</h3>
             </div>
             <div class="gallery-item">
                 <img src="images/fulls/03_divulgazione.jpg" alt="Outreach">
-                <h3>Science Outreach</h3>
+                <h3>03. Science Outreach</h3>
             </div>
             <div class="gallery-item">
                 <img src="images/fulls/04_divulgazione.jpg" alt="Talk">
-                <h3>Public Speaking</h3>
+                <h3>04. Public Speaking</h3>
             </div>
             <div class="gallery-item">
                 <img src="images/fulls/05_divulgazione.jpg" alt="Workshop">
-                <h3>Workshop</h3>
+                <h3>05. Workshop</h3>
             </div>
             <div class="gallery-item">
                 <img src="images/fulls/06_guitar.jpg" alt="Music">
-                <h3>Acoustic Waves</h3>
+                <h3>06. Acoustic Waves</h3>
             </div>
             <div class="gallery-item">
                 <img src="images/fulls/07_div.jpg" alt="Physics">
-                <h3>Physics Outreach</h3>
+                <h3>07. Physics Outreach</h3>
             </div>
             <div class="gallery-item">
                 <img src="images/fulls/08_div.jpg" alt="Cosmos">
-                <h3>Cosmos Beauty</h3>
+                <h3>08. Cosmos Beauty</h3>
             </div>
             <div class="gallery-item">
                 <img src="images/fulls/09_trekking.jpg" alt="Trekking">
-                <h3>Beyond the Lab</h3>
+                <h3>09. Beyond the Lab</h3>
             </div>
             <div class="gallery-item">
                 <img src="images/fulls/12_food.JPG" alt="Food">
-                <h3>Science of Food</h3>
+                <h3>10. Science of Food</h3>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 Pasquale Francesco Romano | Built with simple HTML/CSS</p>
+        <p>&copy; 2024 PASQUALE FRANCESCO ROMANO | PHYSICIST PORTFOLIO</p>
     </footer>
 
 </body>
