@@ -1,109 +1,175 @@
-<!DOCTYPE HTML>
-<html>
-    <head>
-        <title>Pasquale Francesco Romano | Astroparticle Physicist</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <link rel="stylesheet" href="assets/css/main.css" />
-        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-    </head>
-    <body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasquale Francesco Romano | Portfolio</title>
+    <style>
+        /* RESET E STILI BASE */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
 
-        <div id="wrapper">
+        /* LINK NERI */
+        a {
+            color: #000000;
+            text-decoration: none;
+            transition: opacity 0.3s;
+            border-bottom: 1px solid #000;
+        }
+        a:hover { opacity: 0.6; }
 
-                <section id="main">
+        /* HOME PAGE (HERO) */
+        #home {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
 
-                        <div class="items">
+        h1 {
+            font-size: 3rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
 
-                                <div class="item intro span-2">
-                                    <h3>Pasquale Francesco Romano</h3>
-                                    <p>Your friendly neighborhood astroparticle physicist.<br />
-                                    Capturing photons for science, photos for passion,<br />
-                                    and beating the guitar in my free time.</p>
-                                </div>
+        .description {
+            max-width: 600px;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
 
-                                <article class="item thumb span-1">
-                                    <h2>Graduation Day</h2>
-                                    <a href="images/fulls/01_laurea.jpg" class="image"><img src="images/thumbs/01_laurea.jpg" alt="Graduation"></a>
-                                </article>
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
 
-                                <article class="item thumb span-2">
-                                    <h2>CERN Days</h2>
-                                    <a href="images/fulls/02_cern.jpg" class="image"><img src="images/thumbs/02_cern.jpg" alt="CERN research"></a>
-                                </article>
+        nav ul li { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; }
 
-                                <article class="item thumb span-1">
-                                    <h2>Science Outreach</h2>
-                                    <a href="images/fulls/03_divulgazione.jpg" class="image"><img src="images/thumbs/03_divulgazione.jpg" alt="Outreach"></a>
-                                </article>
+        /* GALLERY SECTION */
+        #gallery {
+            padding: 100px 5%;
+            background: #ffffff;
+        }
 
-                                <article class="item thumb span-1">
-                                    <h2>Public Talk</h2>
-                                    <a href="images/fulls/04_divulgazione.jpg" class="image"><img src="images/thumbs/04_divulgazione.jpg" alt="Speaking"></a>
-                                </article>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
 
-                                <article class="item thumb span-1">
-                                    <h2>Workshop</h2>
-                                    <a href="images/fulls/05_divulgazione.jpg" class="image"><img src="images/thumbs/05_divulgazione.jpg" alt="Scientific workshop"></a>
-                                </article>
+        .gallery-item {
+            overflow: hidden;
+            position: relative;
+            background: #f9f9f9;
+        }
 
-                            </div>
+        .gallery-item img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
 
-                        <div class="items">
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
 
-                                <article class="item thumb span-3">
-                                    <h2>Acoustic Waves</h2>
-                                    <a href="images/fulls/06_guitar.jpg" class="image"><img src="images/thumbs/06_guitar.jpg" alt="Guitar"></a>
-                                </article>
+        .gallery-item h3 {
+            padding: 15px 0;
+            font-size: 0.9rem;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
 
-                                <article class="item thumb span-2">
-                                    <h2>Physics for All</h2>
-                                    <a href="images/fulls/07_div.jpg" class="image"><img src="images/thumbs/07_div.jpg" alt="Sharing knowledge"></a>
-                                </article>
+        /* FOOTER */
+        footer {
+            padding: 50px;
+            text-align: center;
+            font-size: 0.8rem;
+            border-top: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
 
-                                <article class="item thumb span-2">
-                                    <h2>The Beauty of Cosmos</h2>
-                                    <a href="images/fulls/08_div.jpg" class="image"><img src="images/thumbs/08_div.jpg" alt="Cosmos"></a>
-                                </article>
+    <section id="home">
+        <h1>Pasquale Francesco Romano</h1>
+        <p class="description">
+            Your friendly neighborhood astroparticle physicist. <br>
+            Capturing photons for science, photos for passion, and beating the guitar in my free time. <br>
+            Dedicated to making the universe a bit less mysterious through outreach.
+        </p>
+        
+        <nav>
+            <ul>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="https://www.epsyoungminds.org/" target="_blank">Website managed by me</a></li>
+                <li><a href="mailto:pasqualefrancescoromano@gmail.com">Email</a></li>
+            </ul>
+        </nav>
+    </section>
 
-                                <article class="item thumb span-3">
-                                    <h2>Beyond the Lab</h2>
-                                    <a href="images/fulls/09_trekking.jpg" class="image"><img src="images/thumbs/09_trekking.jpg" alt="Trekking"></a>
-                                </article>
-                                
-                                <article class="item thumb span-2">
-                                    <h2>Physics of Cooking</h2>
-                                    <a href="images/fulls/12_food.JPG" class="image"><img src="images/thumbs/12_food.JPG" alt="Food Science"></a>
-                                </article>
-
-                            </div>
-
-                    </section>
-
-                <section id="footer">
-                        <section>
-                            <p>I am an Astroparticle Physicist dedicated to making the universe a bit less mysterious through research and outreach.</p>
-                        </section>
-                        <section>
-                            <ul class="icons">
-                                <li><a href="https://github.com/pfromano" class="icon brands fa-github"><span class="label">Github</span></a></li>
-                                <li><a href="mailto:pasqualefrancescoromano@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-                            </ul>
-                            <ul class="copyright">
-                                <li>&copy; Pasquale Francesco Romano</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-                            </ul>
-                        </section>
-                    </section>
-
+    <section id="gallery">
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="images/fulls/01_laurea.jpg" alt="Graduation">
+                <h3>Graduation</h3>
             </div>
+            <div class="gallery-item">
+                <img src="images/fulls/02_cern.jpg" alt="CERN">
+                <h3>CERN Research</h3>
+            </div>
+            <div class="gallery-item">
+                <img src="images/fulls/03_divulgazione.jpg" alt="Outreach">
+                <h3>Science Outreach</h3>
+            </div>
+            <div class="gallery-item">
+                <img src="images/fulls/04_divulgazione.jpg" alt="Talk">
+                <h3>Public Speaking</h3>
+            </div>
+            <div class="gallery-item">
+                <img src="images/fulls/05_divulgazione.jpg" alt="Workshop">
+                <h3>Workshop</h3>
+            </div>
+            <div class="gallery-item">
+                <img src="images/fulls/06_guitar.jpg" alt="Music">
+                <h3>Acoustic Waves</h3>
+            </div>
+            <div class="gallery-item">
+                <img src="images/fulls/07_div.jpg" alt="Physics">
+                <h3>Physics Outreach</h3>
+            </div>
+            <div class="gallery-item">
+                <img src="images/fulls/08_div.jpg" alt="Cosmos">
+                <h3>Cosmos Beauty</h3>
+            </div>
+            <div class="gallery-item">
+                <img src="images/fulls/09_trekking.jpg" alt="Trekking">
+                <h3>Beyond the Lab</h3>
+            </div>
+            <div class="gallery-item">
+                <img src="images/fulls/12_food.JPG" alt="Food">
+                <h3>Science of Food</h3>
+            </div>
+        </div>
+    </section>
 
-        <script src="assets/js/jquery.min.js"></script>
-            <script src="assets/js/jquery.poptrox.min.js"></script>
-            <script src="assets/js/browser.min.js"></script>
-            <script src="assets/js/breakpoints.min.js"></script>
-            <script src="assets/js/util.js"></script>
-            <script src="assets/js/main.js"></script>
+    <footer>
+        <p>&copy; 2024 Pasquale Francesco Romano | Built with simple HTML/CSS</p>
+    </footer>
 
-    </body>
+</body>
 </html>
-
