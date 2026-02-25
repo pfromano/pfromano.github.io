@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pasquale Francesco Romano | Portfolio</title>
+    
+    <link rel="icon" type="image/png" href="favicon.png">
+
     <style>
         /* RESET E STILI BASE */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
-            /* CAMBIO FONT IN MONACO */
             font-family: "Monaco", "Courier New", Courier, monospace;
             background-color: #ffffff;
             color: #000000;
@@ -38,7 +40,7 @@
         }
 
         h1 {
-            font-size: 2.5rem; /* Leggermente ridotto per adattarsi al font monospaced */
+            font-size: 2.5rem;
             font-weight: normal;
             margin-bottom: 20px;
             letter-spacing: -1px;
@@ -62,42 +64,44 @@
             letter-spacing: 1px; 
         }
 
-        /* GALLERY SECTION */
+        /* GALLERIA VERTICALE */
         #gallery {
-            padding: 100px 5%;
+            padding: 100px 10%;
             background: #ffffff;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            max-width: 900px; /* Centra la colonna di foto */
+            margin: 0 auto;
         }
 
         .gallery-item {
-            overflow: hidden;
-            position: relative;
+            margin-bottom: 80px; /* Spazio tra un blocco e l'altro */
+            text-align: left;
         }
 
         .gallery-item img {
             width: 100%;
-            height: 400px;
-            object-fit: cover;
+            height: auto;
             display: block;
-            filter: grayscale(20%); /* Leggero tocco artistico per lo stile tech */
-            transition: all 0.5s ease;
+            margin-bottom: 20px;
+            filter: grayscale(10%);
+            transition: filter 0.5s ease;
         }
 
         .gallery-item:hover img {
-            transform: scale(1.03);
             filter: grayscale(0%);
         }
 
         .gallery-item h3 {
-            padding: 15px 0;
-            font-size: 0.8rem;
-            font-weight: normal;
+            font-size: 1rem;
+            font-weight: bold;
             text-transform: uppercase;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .gallery-item p {
+            font-size: 0.9rem;
+            color: #333;
+            max-width: 100%;
         }
 
         /* FOOTER */
@@ -108,6 +112,12 @@
             border-top: 1px solid #eee;
             letter-spacing: 1px;
         }
+
+        /* Responsive per cellulari */
+        @media (max-width: 768px) {
+            #gallery { padding: 50px 5%; }
+            h1 { font-size: 1.8rem; }
+        }
     </style>
 </head>
 <body>
@@ -116,11 +126,9 @@
         <h1>Pasquale Francesco Romano</h1>
         <p class="description">
             Your friendly neighborhood astroparticle physicist. <br>
-            Capturing photons for science, taking photos for my friends, and beating the guitar in my free time. <br>
+            Capturing photons for science, photos for passion, and beating the guitar in my free time. <br>
             Dedicated to making the universe a bit less mysterious through outreach.
         </p>
-
-        <link rel="icon" type="image/png" href="favicon.png">
         
         <nav>
             <ul>
@@ -132,48 +140,67 @@
     </section>
 
     <section id="gallery">
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="images/fulls/01_laurea.jpg" alt="Graduation">
-                <h3>01. Graduation</h3>
-            </div>
-            <div class="gallery-item">
-                <img src="images/fulls/02_cern.jpg" alt="CERN">
-                <h3>02. CERN Research</h3>
-            </div>
-            <div class="gallery-item">
-                <img src="images/fulls/03_divulgazione.jpg" alt="Outreach">
-                <h3>03. Science Outreach</h3>
-            </div>
-            <div class="gallery-item">
-                <img src="images/fulls/04_divulgazione.jpg" alt="Talk">
-                <h3>04. Public Speaking</h3>
-            </div>
-            <div class="gallery-item">
-                <img src="images/fulls/05_divulgazione.jpg" alt="Workshop">
-                <h3>05. Workshop</h3>
-            </div>
-            <div class="gallery-item">
-                <img src="images/fulls/06_guitar.jpg" alt="Music">
-                <h3>06. Acoustic Waves</h3>
-            </div>
-            <div class="gallery-item">
-                <img src="images/fulls/07_div.jpg" alt="Physics">
-                <h3>07. Physics Outreach</h3>
-            </div>
-            <div class="gallery-item">
-                <img src="images/fulls/08_div.jpg" alt="Cosmos">
-                <h3>08. Cosmos Beauty</h3>
-            </div>
-            <div class="gallery-item">
-                <img src="images/fulls/09_trekking.jpg" alt="Trekking">
-                <h3>09. Beyond the Lab</h3>
-            </div>
-            <div class="gallery-item">
-                <img src="images/fulls/12_food.JPG" alt="Food">
-                <h3>10. Science of Food</h3>
-            </div>
+        
+        <div class="gallery-item">
+            <img src="images/fulls/01_laurea.jpg" alt="Graduation">
+            <h3>01. Graduation Day</h3>
+            <p>The moment I officially started my journey into the secrets of subatomic particles.</p>
         </div>
+
+        <div class="gallery-item">
+            <img src="images/fulls/02_cern.jpg" alt="CERN">
+            <h3>02. CERN Research</h3>
+            <p>Working at the heart of modern physics, where cosmic questions meet cutting-edge technology.</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/fulls/03_divulgazione.jpg" alt="Outreach">
+            <h3>03. Science Outreach</h3>
+            <p>Communicating science is as important as doing it. Engaging with the curious minds of tomorrow.</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/fulls/04_divulgazione.jpg" alt="Talk">
+            <h3>04. Public Speaking</h3>
+            <p>Sharing the hidden stories of the universe with the general public during a seminar.</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/fulls/05_divulgazione.jpg" alt="Workshop">
+            <h3>05. Hands-on Workshop</h3>
+            <p>Physics is best learned by doing. A session showing how particles interact with the world around us.</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/fulls/06_guitar.jpg" alt="Music">
+            <h3>06. Acoustic Waves</h3>
+            <p>Exploring the mathematical beauty of music and the physical resonance of guitar strings.</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/fulls/07_div.jpg" alt="Physics">
+            <h3>07. Physics for the Community</h3>
+            <p>Democratizing science through local events and interactive demonstrations.</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/fulls/08_div.jpg" alt="Cosmos">
+            <h3>08. Cosmic Beauty</h3>
+            <p>Visualizing the data and the invisible phenomena that shape our galaxy.</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/fulls/09_trekking.jpg" alt="Trekking">
+            <h3>09. Beyond the Laboratory</h3>
+            <p>Reconnecting with nature and the macroscopic world through mountain exploration.</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/fulls/12_food.JPG" alt="Food">
+            <h3>10. The Science of Food</h3>
+            <p>Where chemistry and flavor meet. Experimenting in the kitchen is just another form of lab work.</p>
+        </div>
+
     </section>
 
     <footer>
@@ -182,5 +209,3 @@
 
 </body>
 </html>
-
-
